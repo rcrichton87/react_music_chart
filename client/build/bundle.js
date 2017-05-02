@@ -22132,23 +22132,28 @@ var Song = function Song(props) {
   return _react2.default.createElement(
     'div',
     { className: 'song' },
+    _react2.default.createElement('img', { src: props.song['im:image'][2].label }),
     _react2.default.createElement(
-      'p',
-      null,
-      props.index + 1,
-      '.'
-    ),
-    _react2.default.createElement(
-      'p',
-      null,
-      'Title: ',
-      props.song.title.label
-    ),
-    _react2.default.createElement(
-      'p',
-      null,
-      'Artist: ',
-      props.song['im:artist'].label
+      'div',
+      { className: 'songInfo' },
+      _react2.default.createElement(
+        'p',
+        null,
+        props.index + 1,
+        '.'
+      ),
+      _react2.default.createElement(
+        'p',
+        null,
+        'Title: ',
+        props.song.title.label
+      ),
+      _react2.default.createElement(
+        'p',
+        null,
+        'Artist: ',
+        props.song['im:artist'].label
+      )
     )
   );
 };
