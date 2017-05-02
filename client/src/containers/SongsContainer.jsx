@@ -20,7 +20,8 @@ class SongsContainer extends React.Component{
       if(request.status === 200){
         const jsonString = request.responseText
         const songs = JSON.parse(jsonString)
-        this.setState( {songs: songs} )
+        console.log(songs.feed.entry[0])
+        this.setState( {songs: songs.feed.entry} )
       }
     }
     request.send()
@@ -28,7 +29,7 @@ class SongsContainer extends React.Component{
 
   render(){
     return(
-      <div>Songs container</div>
+      <SongsList songs={this.state.songs} />
     )
   }
 

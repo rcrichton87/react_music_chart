@@ -1,9 +1,10 @@
+import React from 'react'
 import Song from './Song'
 
 const SongsList = (props) => {
-  const songNodes = this.props.songs.map( (song, index) => {
+  const songNodes = props.songs.map( (song, index) => {
     return(
-      <Song song={song} key={index} />
+      <Song song={song} index={index} key={index} />
     )
   })
 
