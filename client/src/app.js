@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import SongsContainer from './containers/SongsContainer'
 
 window.onload = function(){
   ReactDOM.render(
-    <div>Hi</div>,
+    <SongsContainer />,
     document.getElementById('app')
   );
 };
